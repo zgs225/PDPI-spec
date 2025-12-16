@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Template for spec module status tracking",
+  
+  "module": "[module-name]",
+  "displayName": "[Human Readable Name]",
+  "createdAt": "YYYY-MM-DD",
+  "updatedAt": "YYYY-MM-DD",
+  
+  "currentPhase": "PREWORK | REQUIREMENTS | DESIGN | PLAN | IMPLEMENTATION | ACCEPTANCE | COMPLETE",
+  "currentStatus": "IN_PROGRESS | BLOCKED | APPROVED | REJECTED",
+  
+  "phaseHistory": [
+    {
+      "phase": "PREWORK",
+      "status": "APPROVED",
+      "date": "YYYY-MM-DD",
+      "reviewer": "AI/Human",
+      "notes": ""
+    },
+    {
+      "phase": "REQUIREMENTS", 
+      "status": "APPROVED",
+      "date": "YYYY-MM-DD",
+      "reviewer": "AI/Human",
+      "notes": ""
+    },
+    {
+      "phase": "DESIGN",
+      "status": "IN_PROGRESS",
+      "date": "YYYY-MM-DD",
+      "reviewer": null,
+      "notes": ""
+    }
+  ],
+  
+  "blockers": [
+    {
+      "id": "BLK-001",
+      "description": "Waiting for auth module to be ready",
+      "dependency": "auth-module",
+      "status": "OPEN | RESOLVED",
+      "createdAt": "YYYY-MM-DD",
+      "resolvedAt": null
+    }
+  ],
+  
+  "changeRequests": [
+    {
+      "id": "CR-001",
+      "type": "SCOPE_CHANGE | BUG_FIX | CLARIFICATION",
+      "description": "Add support for offline mode",
+      "requestedBy": "Product Owner",
+      "impactedPhases": ["REQUIREMENTS", "DESIGN"],
+      "status": "PENDING | APPROVED | REJECTED | DEFERRED",
+      "decision": "",
+      "createdAt": "YYYY-MM-DD",
+      "resolvedAt": null
+    }
+  ],
+  
+  "metrics": {
+    "totalEstimatedEffort": "X hours",
+    "actualEffort": "Y hours",
+    "backtrackCount": 0,
+    "changeRequestCount": 0
+  }
+}
