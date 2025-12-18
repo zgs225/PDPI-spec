@@ -1,13 +1,14 @@
 {
-  "_comment": "STATUS.json Template - AI creates and updates this file",
-  "_usage": "Copy this template to specs/[module-name]/STATUS.json",
+  "_comment": "STATUS.json 模板 - AI 创建和更新此文件",
+  "_usage": "复制此模板到 specs/[module-name]/STATUS.json",
   
   "module": "[module-name]",
-  "displayName": "[Human Readable Name]",
+  "displayName": "[人类可读名称]",
   "createdAt": "YYYY-MM-DD",
   "lastUpdated": "YYYY-MM-DD",
   
   "currentPhase": "PREWORK",
+  "nextAction": "收集项目上下文：识别框架、依赖、相似功能",
   "preworkRefreshedAt": "YYYY-MM-DD",
   
   "phaseHistory": [],
@@ -15,6 +16,15 @@
   "blockers": [],
   
   "changeRequests": [],
+  
+  "contextSummary": "简短描述当前工作内容和背景（1-2句话）",
+  
+  "rulesLoaded": [
+    ".spec-rules/core/protocol.md",
+    ".spec-rules/phases/PREWORK.md"
+  ],
+  
+  "lastAIReminder": "记住关键约束或下一步的重要提示",
   
   "metrics": {
     "totalEstimatedEffort": null,
@@ -25,6 +35,10 @@
 
   "_schema": {
     "currentPhase": ["PREWORK", "REQUIREMENTS", "DESIGN", "PLAN", "IMPLEMENTATION", "ACCEPTANCE", "COMPLETE"],
+    "nextAction": "string - 具体的下一步操作描述，用于恢复会话",
+    "contextSummary": "string - 简短的上下文摘要，帮助AI快速恢复状态",
+    "rulesLoaded": "array - 当前阶段已加载的规则文件列表",
+    "lastAIReminder": "string - 关键提醒，如约束、注意事项",
     "phaseHistory_entry": {
       "phase": "string (phase name)",
       "status": ["IN_PROGRESS", "APPROVED", "REJECTED", "INVALIDATED"],
@@ -49,5 +63,12 @@
       "createdAt": "YYYY-MM-DD",
       "resolvedAt": "YYYY-MM-DD or null"
     }
+  },
+
+  "_newFields": {
+    "nextAction": "AI会话恢复点 - 告诉AI下一步具体做什么",
+    "contextSummary": "快速上下文 - AI无需读完所有文档即可了解当前状态",
+    "rulesLoaded": "智能规则加载 - 只加载当前阶段需要的规则文件",
+    "lastAIReminder": "关键提醒 - 不要忘记的重要约束或检查点"
   }
 }

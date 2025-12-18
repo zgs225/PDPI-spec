@@ -69,6 +69,19 @@ The core philosophy is **"Think before you code"**. We do not jump straight into
 
 ## 🚀 How to Use / 使用指南
 
+### 📖 文档导航
+
+- **[DOCUMENTATION-INDEX.md](DOCUMENTATION-INDEX.md)** 📚 完整文档索引（按角色/场景查找）
+
+**快速开始**：
+- **[GETTING-STARTED.md](GETTING-STARTED.md)** ⭐ **从这里开始** - 5分钟极速入门，第一次使用必读
+- **[QUICK-START.md](QUICK-START.md)** - 完整操作指南，包含工作流程、常见场景和故障排查
+- **[PROMPT-TEMPLATES.md](PROMPT-TEMPLATES.md)** - 提示词模板库，各阶段标准提示词参考
+
+**系统配置**：
+- **[AGENTS.md](AGENTS.md)** - AI核心配置文件（Cursor自动加载）
+- **[.spec-rules/](.spec-rules/)** - 规则系统目录（详细协议和模板）
+
 The protocols and templates for each phase are located in the `.spec-rules/` directory.
 每个阶段的协议和模板都位于 `.spec-rules/` 目录下。
 
